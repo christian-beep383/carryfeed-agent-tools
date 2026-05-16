@@ -2,14 +2,27 @@
   "name": "@carryfeed/sdk",
   "version": "0.1.0",
   "type": "module",
-  "description": "JavaScript SDK wrapper for the hosted CarryFeed public X/Twitter link API.",
+  "description": "SDK for CarryFeed's hosted public X/Twitter profile, post, article, and media API for agents.",
   "main": "./src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/christian-beep383/carryfeed-agent-tools.git",
     "directory": "packages/sdk"
   },
-  "homepage": "https://github.com/christian-beep383/carryfeed-agent-tools#readme",
+  "homepage": "https://carryfeed.com",
+  "keywords": [
+    "carryfeed",
+    "twitter",
+    "x",
+    "twitter-viewer",
+    "x-viewer",
+    "twitter-video-downloader",
+    "twitter-image-downloader",
+    "twitter-gif-downloader",
+    "agent-tools",
+    "llms",
+    "openapi"
+  ],
   "bugs": {
     "url": "https://github.com/christian-beep383/carryfeed-agent-tools/issues"
   },
