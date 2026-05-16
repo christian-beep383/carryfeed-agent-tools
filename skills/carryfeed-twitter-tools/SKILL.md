@@ -1,9 +1,7 @@
 ---
 name: carryfeed-twitter-tools
 description: Use the CarryFeed CLI to resolve public X/Twitter profiles, posts, article-style links, image, video, and GIF media for agent workflows. Use when an agent needs source-preserving public X/Twitter context, profile metadata, post text, media candidates, or download URLs without browser login flows or CarryFeed internal implementation code.
-metadata:
-  openclaw:
-    homepage: https://carryfeed.com
+metadata: {"openclaw":{"homepage":"https://carryfeed.com","install":[{"kind":"node","package":"@carryfeed/cli","bins":["carryfeed"]}]}}
 ---
 
 # CarryFeed Twitter Tools
