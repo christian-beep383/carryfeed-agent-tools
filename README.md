@@ -1,6 +1,8 @@
 # CarryFeed Agent Tools
 
 [![skills.sh](https://skills.sh/b/christian-beep383/carryfeed-agent-tools)](https://skills.sh/christian-beep383/carryfeed-agent-tools)
+[![npm @carryfeed/sdk](https://img.shields.io/npm/v/@carryfeed/sdk?label=%40carryfeed%2Fsdk)](https://www.npmjs.com/package/@carryfeed/sdk)
+[![npm @carryfeed/cli](https://img.shields.io/npm/v/@carryfeed/cli?label=%40carryfeed%2Fcli)](https://www.npmjs.com/package/@carryfeed/cli)
 
 Public SDK, CLI, OpenAPI notes, and agent skill wrappers for the hosted [CarryFeed](https://carryfeed.com) API.
 
