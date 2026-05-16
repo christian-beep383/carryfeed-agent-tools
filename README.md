@@ -3,8 +3,9 @@
 [![skills.sh](https://skills.sh/b/christian-beep383/carryfeed-agent-tools)](https://skills.sh/christian-beep383/carryfeed-agent-tools)
 [![npm @carryfeed/sdk](https://img.shields.io/npm/v/@carryfeed/sdk?label=%40carryfeed%2Fsdk)](https://www.npmjs.com/package/@carryfeed/sdk)
 [![npm @carryfeed/cli](https://img.shields.io/npm/v/@carryfeed/cli?label=%40carryfeed%2Fcli)](https://www.npmjs.com/package/@carryfeed/cli)
+[![npm @carryfeed/mcp](https://img.shields.io/npm/v/@carryfeed/mcp?label=%40carryfeed%2Fmcp)](https://www.npmjs.com/package/@carryfeed/mcp)
 
-Public SDK, CLI, OpenAPI notes, and agent skill wrappers for the hosted [CarryFeed](https://carryfeed.com) API.
+Public SDK, CLI, MCP server, OpenAPI notes, and agent skill wrappers for the hosted [CarryFeed](https://carryfeed.com) API.
 
 This repository is intentionally a wrapper layer. It does not include CarryFeed's internal resolver implementation, Worker source, direct X/Twitter client code, tokens, cookies, or scraping internals.
 
@@ -25,6 +26,7 @@ Useful links:
 
 - `@carryfeed/sdk`: JavaScript SDK for the hosted CarryFeed API.
 - `@carryfeed/cli`: CLI wrapper for agents and local scripts.
+- `@carryfeed/mcp`: stdio MCP server for MCP-capable agents.
 - `skills/carryfeed-twitter-tools`: Agent skill instructions for public X/Twitter link workflows.
 
 ## Public Scope
@@ -63,6 +65,19 @@ npx -y @carryfeed/cli media https://x.com/user/status/123 --compact
 npx -y @carryfeed/cli profile NASA --statuses --count 5 --compact
 ```
 
+MCP:
+
+```json
+{
+  "mcpServers": {
+    "carryfeed": {
+      "command": "npx",
+      "args": ["-y", "@carryfeed/mcp"]
+    }
+  }
+}
+```
+
 ## Agent Docs
 
 See [docs/agents.md](docs/agents.md) for agent-facing usage, response expectations, and safety boundaries.
@@ -96,6 +111,7 @@ Dry-run package contents:
 ```bash
 npm run pack:sdk
 npm run pack:cli
+npm run pack:mcp
 ```
 
 Publish when logged in as an npm user with write access to the `carryfeed` organization:
@@ -103,6 +119,7 @@ Publish when logged in as an npm user with write access to the `carryfeed` organ
 ```bash
 npm run publish:sdk
 npm run publish:cli
+npm run publish:mcp
 ```
 
 Recommended first GitHub remote:

@@ -10,10 +10,13 @@
   "scripts": {
     "smoke": "node -e \"import('./packages/sdk/src/index.js').then(m => console.log(Object.keys(m).join(',')))\"",
     "cli:help": "node ./packages/cli/src/index.js --help",
+    "mcp:help": "node ./packages/mcp/src/index.js --help",
     "pack:sdk": "npm pack --dry-run --workspace @carryfeed/sdk",
     "pack:cli": "npm pack --dry-run --workspace @carryfeed/cli",
+    "pack:mcp": "npm pack --dry-run --workspace @carryfeed/mcp",
     "publish:sdk": "npm publish --workspace @carryfeed/sdk --access public",
-    "publish:cli": "npm publish --workspace @carryfeed/cli --access public"
+    "publish:cli": "npm publish --workspace @carryfeed/cli --access public",
+    "publish:mcp": "npm publish --workspace @carryfeed/mcp --access public"
   },
   "engines": {
     "node": ">=18"

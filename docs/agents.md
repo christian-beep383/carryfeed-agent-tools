@@ -35,6 +35,23 @@ npx -y @carryfeed/cli media https://x.com/user/status/123 --compact
 npx -y @carryfeed/cli profile NASA --statuses --count 5 --compact
 ```
 
+## MCP Path
+
+Use the MCP server when the host supports MCP tools and the user wants CarryFeed available as a reusable tool surface:
+
+```json
+{
+  "mcpServers": {
+    "carryfeed": {
+      "command": "npx",
+      "args": ["-y", "@carryfeed/mcp"]
+    }
+  }
+}
+```
+
+The MCP package exposes the same hosted API wrapper as tools named `carryfeed_resolve`, `carryfeed_media`, `carryfeed_profile`, `carryfeed_profile_statuses`, `carryfeed_profile_media`, `carryfeed_post`, and `carryfeed_download_url`.
+
 ## CLI Reference
 
 ```bash

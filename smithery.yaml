@@ -1,0 +1,20 @@
+# Smithery configuration for the CarryFeed MCP server.
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      carryfeedApiBaseUrl:
+        type: string
+        default: https://api.carryfeed.com
+        description: Optional CarryFeed API base URL.
+  commandFunction: |-
+    (config) => ({
+      command: 'npx',
+      args: ['-y', '@carryfeed/mcp'],
+      env: {
+        CARRYFEED_API_BASE_URL: config.carryfeedApiBaseUrl || 'https://api.carryfeed.com'
+      }
+    })
+  exampleConfig:
+    carryfeedApiBaseUrl: https://api.carryfeed.com
