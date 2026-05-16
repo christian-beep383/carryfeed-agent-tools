@@ -1,5 +1,7 @@
 # CarryFeed Agent Tools
 
+[![skills.sh](https://skills.sh/b/christian-beep383/carryfeed-agent-tools)](https://skills.sh/christian-beep383/carryfeed-agent-tools)
+
 Public SDK, CLI, OpenAPI notes, and agent skill wrappers for the hosted [CarryFeed](https://carryfeed.com) API.
 
 This repository is intentionally a wrapper layer. It does not include CarryFeed's internal resolver implementation, Worker source, direct X/Twitter client code, tokens, cookies, or scraping internals.
