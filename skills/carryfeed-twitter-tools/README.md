@@ -1,8 +1,16 @@
 # CarryFeed Twitter Tools Skill
 
-Agent skill for resolving public X/Twitter source context through CarryFeed's hosted API, SDK, or CLI.
+Agent skill for resolving public X/Twitter source context through the CarryFeed CLI.
 
-CarryFeed is useful when an agent needs public profile metadata, post text, article-style link context, or media candidates without browser login prompts. It keeps the original source URL beside the returned text, author context, and public media metadata.
+CarryFeed is useful when an agent needs public profile metadata, post text, article-style link context, or media candidates without browser login prompts. The skill intentionally guides agents to one default path, `npx -y @carryfeed/cli`, so they can act consistently and keep the original source URL beside returned text, author context, and public media metadata.
+
+## Default Usage
+
+```bash
+npx -y @carryfeed/cli resolve https://x.com/user/status/123 --compact
+npx -y @carryfeed/cli media https://x.com/user/status/123 --compact
+npx -y @carryfeed/cli profile NASA --statuses --count 5 --compact
+```
 
 ## Install From GitHub
 
@@ -32,6 +40,4 @@ clawhub skill publish . --slug carryfeed-twitter-tools --name "CarryFeed Twitter
 - Website: https://carryfeed.com
 - API health: https://api.carryfeed.com/health
 - Agent discovery: https://carryfeed.com/llms.txt
-- OpenAPI: https://carryfeed.com/openapi.json
-- SDK: https://www.npmjs.com/package/@carryfeed/sdk
 - CLI: https://www.npmjs.com/package/@carryfeed/cli

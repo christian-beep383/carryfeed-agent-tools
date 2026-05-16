@@ -54,9 +54,9 @@ const profile = await carryfeed.getProfile("NASA");
 CLI:
 
 ```bash
-npx @carryfeed/cli resolve https://x.com/user/status/123
-npx @carryfeed/cli media https://x.com/user/status/123
-npx @carryfeed/cli profile NASA --statuses --count 5
+npx -y @carryfeed/cli resolve https://x.com/user/status/123 --compact
+npx -y @carryfeed/cli media https://x.com/user/status/123 --compact
+npx -y @carryfeed/cli profile NASA --statuses --count 5 --compact
 ```
 
 ## Agent Docs
@@ -65,7 +65,7 @@ See [docs/agents.md](docs/agents.md) for agent-facing usage, response expectatio
 
 ## Agent Skill
 
-The repository includes `skills/carryfeed-twitter-tools`, a wrapper-only skill that tells agents to call CarryFeed's hosted API, SDK, or CLI for public X/Twitter source context.
+The repository includes `skills/carryfeed-twitter-tools`, a wrapper-only skill that tells agents to use `npx -y @carryfeed/cli` for public X/Twitter source context. SDK and OpenAPI details are kept for developers, while the skill gives agents one default path.
 
 After this repository is public, agents that support the Skills CLI can install it with:
 
