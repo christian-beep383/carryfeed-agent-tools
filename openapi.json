@@ -1,0 +1,174 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "CarryFeed API",
+    "version": "0.1.0",
+    "description": "Public X/Twitter link resolver endpoints used by the CarryFeed SDK and CLI."
+  },
+  "servers": [
+    {
+      "url": "https://api.carryfeed.com"
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Service health",
+        "responses": {
+          "200": {
+            "description": "Service metadata"
+          }
+        }
+      }
+    },
+    "/api/resolve": {
+      "get": {
+        "summary": "Resolve a public X/Twitter input",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "provider",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": ["fxtwitter", "direct"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resolved public content payload"
+          }
+        }
+      }
+    },
+    "/api/media": {
+      "get": {
+        "summary": "Resolve media exposed by a public post",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Media file list"
+          }
+        }
+      }
+    },
+    "/api/profile/{handle}": {
+      "get": {
+        "summary": "Resolve a public profile",
+        "parameters": [
+          {
+            "name": "handle",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Profile payload"
+          }
+        }
+      }
+    },
+    "/api/profile/{handle}/statuses": {
+      "get": {
+        "summary": "Resolve recent public profile statuses",
+        "parameters": [
+          {
+            "name": "handle",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 2,
+              "maximum": 40
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Recent public statuses"
+          }
+        }
+      }
+    },
+    "/api/profile/{handle}/media": {
+      "get": {
+        "summary": "Resolve recent public profile media",
+        "parameters": [
+          {
+            "name": "handle",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 2,
+              "maximum": 40
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Recent public media payload"
+          }
+        }
+      }
+    },
+    "/api/post/{id}": {
+      "get": {
+        "summary": "Resolve a public post",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Post payload"
+          }
+        }
+      }
+    }
+  }
+}
