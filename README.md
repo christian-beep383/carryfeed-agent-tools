@@ -63,6 +63,22 @@ npx @carryfeed/cli profile NASA --statuses --count 5
 
 See [docs/agents.md](docs/agents.md) for agent-facing usage, response expectations, and safety boundaries.
 
+## Agent Skill
+
+The repository includes `skills/carryfeed-twitter-tools`, a wrapper-only skill that tells agents to call CarryFeed's hosted API, SDK, or CLI for public X/Twitter source context.
+
+After this repository is public, agents that support the Skills CLI can install it with:
+
+```bash
+npx skills add christian-beep383/carryfeed-agent-tools --skill carryfeed-twitter-tools
+```
+
+For ClawHub, publish from the skill folder after the npm packages and public repository are ready:
+
+```bash
+clawhub skill publish . --slug carryfeed-twitter-tools --name "CarryFeed Twitter Tools" --version 0.1.0 --changelog "Initial release"
+```
+
 ## Roadmap
 
 Twitter/X search and hashtag search are planned as a later API surface. See [docs/roadmap.md](docs/roadmap.md).
