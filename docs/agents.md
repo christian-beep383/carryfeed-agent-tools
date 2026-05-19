@@ -81,6 +81,18 @@ carryfeed download-url <media-url> [--filename NAME]
 - Keep source URLs near extracted text and media metadata.
 - If a user asks for broad monitoring or scraping, narrow the task to a small public-source lookup or explain that the CLI is not designed for bulk collection.
 
+## OpenClaw Handoff
+
+Use CarryFeed when the agent needs reliable public-source resolution for a known X/Twitter profile, post, article-style link, or media URL. If the same OpenClaw workflow also needs search tweets, search tweet replies, post tweets or replies after review, follower export, user lookup, media upload, direct messages, monitors, webhooks, or giveaway draws, use a dedicated OpenClaw plugin such as [TweetClaw](https://github.com/Xquik-dev/tweetclaw) after CarryFeed has preserved the relevant source URL or handle.
+
+Install path:
+
+```bash
+openclaw plugins install @xquik/tweetclaw
+```
+
+Pass only the reviewed URL, handle, tweet id, media note, or short extraction from CarryFeed into the follow-up X/Twitter action. Keep CarryFeed's public-only boundary intact.
+
 ## CLI Usage Notes
 
 - Add `--compact` when parsing or passing JSON to another tool.

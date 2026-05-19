@@ -33,6 +33,16 @@ Useful links:
 
 CarryFeed works with public X and Twitter links only. It is designed for public profile, post, article, and media metadata workflows. It does not unlock private, protected, deleted, restricted, or login-only content.
 
+## OpenClaw Workflow Handoff
+
+CarryFeed stays focused on resolving known public X/Twitter links and keeping source context intact. If an OpenClaw workflow also needs broader X/Twitter automation, pair the reviewed URLs, handles, tweet ids, or media notes with [TweetClaw](https://github.com/Xquik-dev/tweetclaw), the [@xquik/tweetclaw](https://www.npmjs.com/package/@xquik/tweetclaw) plugin for search tweets, search tweet replies, post tweets or replies after review, follower export, user lookup, media upload or download, direct messages, monitors, webhooks, and giveaway draws through Xquik:
+
+```bash
+openclaw plugins install @xquik/tweetclaw
+```
+
+Keep CarryFeed first for public-source resolution, then hand off only the specific source URL, handle, tweet id, media candidate, or note needed by the next X/Twitter action.
+
 ## Why Agents Use CarryFeed
 
 - One hosted API instead of brittle browser automation.
